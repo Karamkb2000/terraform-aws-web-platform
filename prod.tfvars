@@ -1,0 +1,26 @@
+region = "eu-west-1"
+
+project = "web_terraform"
+
+environment = "dev"
+
+vpc_cidr = "10.0.0.0/16"
+
+az_count = 2
+
+instance_type = "t3.micro"
+
+min_size = 2
+
+max_size = 4
+desired_capacity = 2
+
+cpu_target = 50
+
+db_username = "appuser"
+
+db_password = "changeMe_in_real_life_test"
+
+db_instance_class = "db.t3.micro"
+
+db_multi_az = true
