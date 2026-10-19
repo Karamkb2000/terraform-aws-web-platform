@@ -1,70 +1,55 @@
 variable "project" {
-    type = string
-  
+  type = string
 }
-
 
 variable "vpc_id" {
-    type = string
-  
+  type = string
 }
 
-
 variable "instance_type" {
-    type = string
-  
+  type = string
 }
 
 variable "public_subnet_ids" {
-    type = list(string)
-  
+  type = list(string)
 }
 
-
 variable "private_subnet_ids" {
-    type = list(string)
-  
+  type = list(string)
 }
 
 variable "alb_sg_id" {
-    type = string
-  
+  type = string
 }
 
-
 variable "web_sg_id" {
-    type = string
-  
+  type = string
+}
+
+variable "instance_profile_name" {
+  type = string
 }
 
 variable "s3_bucket" {
-    type = string
-  
+  type = string
 }
 
 variable "db_endpoint" {
-    type = string
-  
+  type = string
 }
 
 variable "min_size" {
-    type = number
-  
+  type = number
 }
 
 variable "max_size" {
-    type = number
-  
+  type = number
 }
-
 
 variable "desired_capacity" {
-    type = number
-  
+  type = number
 }
 
-
 variable "cpu_target" {
-    type = number
-  
+  type = number
 }

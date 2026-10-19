@@ -1,11 +1,11 @@
 variable "project" {
-    type = string
+  type = string
 }
 
 variable "vpc_cidr" {
-    type = string
+  type = string
 }
 
-variable "az-names" {
-    type = list(string)
+variable "az_names" {
+  type = list(string)
 }

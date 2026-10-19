@@ -7,21 +7,21 @@ resource "aws_db_subnet_group" "this" {
   }
 }
 
-
 resource "aws_db_instance" "this" {
-  identifier              = "${var.project}-db"
-  allocated_storage       = 20
-  engine                  = "postgres"
-  instance_class          = var.instance_class
-  storage_type =            "gp3"
-  storage_encrypted =       true
-  username                = var.db_username
-  password                = var.db_password
-  db_subnet_group_name    = aws_db_subnet_group.this.name
-  vpc_security_group_ids  = [var.db_sg_id]
-  multi_az                = var.multi_az
-  publicly_accessible =     false
-  skip_final_snapshot =     true
+  identifier             = "${var.project}-db"
+  engine                 = "postgres"
+  instance_class         = var.instance_class
+  allocated_storage      = 20
+  storage_type           = "gp3"
+  storage_encrypted      = true
+  db_name                = "appdb"
+  username               = var.db_username
+  password               = var.db_password
+  db_subnet_group_name   = aws_db_subnet_group.this.name
+  vpc_security_group_ids = [var.db_sg_id]
+  multi_az               = var.multi_az
+  publicly_accessible    = false
+  skip_final_snapshot    = true
 
   tags = {
     Name = "${var.project}-db"
